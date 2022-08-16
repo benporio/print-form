@@ -1,10 +1,17 @@
 <?php
 
-require __DIR__.'//autoload.php';
-
-$uri = parse_url($_SERVER['HTTP_REFERER'], PHP_URL_PATH);
-$uri = explode( '/', $uri );
+require __DIR__.'//inc//autoload.php';
 
 $data = json_decode($_POST['data']);
 
-echo ClassLoader::getInstance(StringUtil::uriToClassName($uri[3]))->echoName();
+$printFormController = new FormController(
+    ClassLoader::getInstance(
+        StringUtil::uriToClassName(
+            UriUtil::getUriPart($_SERVER['HTTP_REFERER'], 3)
+        )
+    )
+);
+
+$form = $printFormController->buildForm($data);
+
+echo $form;

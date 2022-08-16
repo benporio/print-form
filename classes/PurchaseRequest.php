@@ -1,8 +1,19 @@
 <?php
 
-class PurchaseRequest {
-    public function echoName(): string
+class PurchaseRequest extends AFormTypeModel
+{
+    function preProcess(object $data): mixed
     {
-        return 'PurchaseRequest';
+
+    }
+
+    function process(object $data): mixed
+    {
+
+    }
+
+    function postProcess(object $data): mixed
+    {
+        return $data;
     }
 }
