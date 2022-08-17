@@ -13,7 +13,7 @@
     <title>Document</title>
 </head>
 <body style="display: block; background-color: rgb(25, 31, 41);">
-    <div style="border: <?php echo $border; ?>;"><?php include INCLUDE_DIR.'//components//top.php'; ?></div>
+    <div style="border: <?php echo $border; ?>;"><?php include INCLUDE_DIR.'/components/top.php'; ?></div>
     <div style="border: <?php echo $border; ?>;">HEADER</div>
     <div style="border: <?php echo $border; ?>;">BODY</div>
     <div style="border: <?php echo $border; ?>;">FOOTER</div>
