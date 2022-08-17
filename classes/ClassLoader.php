@@ -1,6 +1,7 @@
 <?php
 
-class ClassLoader {
+class ClassLoader
+{
     public static function getInstance(string $className): mixed
     {
         $r = new ReflectionClass($className);

@@ -2,17 +2,17 @@
 
 class PurchaseRequest extends AFormTypeModel
 {
-    function preProcess(object $data): mixed
+    function preProcess(object $data): object
     {
-
+        return $data;
     }
 
-    function process(object $data): mixed
+    function process(object $data): object
     {
-
+        return $data;
     }
 
-    function postProcess(object $data): mixed
+    function postProcess(object $data): object
     {
         return $data;
     }

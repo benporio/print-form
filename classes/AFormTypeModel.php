@@ -17,7 +17,7 @@ abstract class AFormTypeModel implements IFormTypeModel
         }
     }
 
-    abstract function preProcess(object $data): mixed;
-    abstract function process(object $data): mixed;
-    abstract function postProcess(object $data): mixed;
+    abstract function preProcess(object $data): object;
+    abstract function process(object $data): object;
+    abstract function postProcess(object $data): object;
 }
