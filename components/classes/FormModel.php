@@ -42,7 +42,7 @@ class FormModel extends DataModel
             }
         };
 
-        $this->mpdfOptions = new class($this) {
+        $this->mpdfOptions = new class() {
             public string $orientation = 'P';
             public string $defaultPageNumStyle = '1';
             public string $pagenumPrefix = '';
