@@ -27,6 +27,16 @@ abstract class DataModel
         
     }
 
+    private function closeConnection(mixed $connection)
+    {
+        try {
+            odbc_close($connection);
+        } catch (\Exception $e) {
+            throw $e;
+        }
+        
+    }
+
     final public function getQueryResultRowObj(string $query): mixed
     {
         try {
@@ -37,7 +47,7 @@ abstract class DataModel
             while ($objRowArrResult[] = odbc_fetch_object($qry)){}
             unset($objRowArrResult[count($objRowArrResult) - 1]);
             odbc_free_result($qry);
-            odbc_close($MSSQL_CONN);
+            $this->closeConnection($MSSQL_CONN);
             if ($this->preProcessObjRowArrResult != null) {
                 $objRowArrResult = $this->preProcessObjRowArrResult->processArray($objRowArrResult);
             }
