@@ -22,7 +22,7 @@ class FormModel extends DataModel
     {
         ### Setting default logo setup
         $this->logo = new class {
-            public string $path = INCLUDE_DIR.'/logo.jpg';
+            public string $path = INCLUDE_DIR.'/images/logo.jpg';
             public string $height = '90px';
             public string $width = '130px';
             public string $alignment = 'center';
