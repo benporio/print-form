@@ -72,16 +72,7 @@
                                                                     <td style="text-align: right; font-weight: bold; padding-left: 10px;">
                                                                         <div>
                                                                             <span>
-                                                                                <?= Util::moneyFormat(
-                                                                                    $formModel->getColumnTotal(
-                                                                                        Util::getObjPropValFromObjArrays(
-                                                                                            $formModel->columnDefinitions, 
-                                                                                            'description', 
-                                                                                            'TOTAL AMOUNT', 
-                                                                                            'sqlColumnName'
-                                                                                        )
-                                                                                    )) 
-                                                                                ?>
+                                                                                <?= $formModel->objRowArrResult->DocTotal ?>
                                                                             </span>
                                                                         </div>
                                                                     </td>
@@ -104,7 +95,7 @@
                                                                     <td style="text-align: right; font-weight: bold; padding-left: 10px;">
                                                                         <div>
                                                                             <span>
-                                                                                -
+                                                                                <?= $formModel->objRowArrResult->WTSum ?>
                                                                             </span>
                                                                         </div>
                                                                     </td>
@@ -127,16 +118,7 @@
                                                                     <td style="text-align: right; font-weight: bold; padding-left: 10px;">
                                                                         <div>
                                                                             <span>
-                                                                                <?= Util::moneyFormat(
-                                                                                    $formModel->getColumnTotal(
-                                                                                        Util::getObjPropValFromObjArrays(
-                                                                                            $formModel->columnDefinitions, 
-                                                                                            'description', 
-                                                                                            'TOTAL AMOUNT', 
-                                                                                            'sqlColumnName'
-                                                                                        )
-                                                                                    )) 
-                                                                                ?>
+                                                                                <?= $formModel->objRowArrResult->AmountToPay ?>
                                                                             </span>
                                                                         </div>
                                                                     </td>
