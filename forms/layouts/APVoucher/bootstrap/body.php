@@ -6,7 +6,7 @@
                     <thead>
                         <tr style=" border-bottom: 1px solid black;">
                             <?php foreach($formModel->columnDefinitions as $column): ?>
-                                <th style="background-color: darkblue; color: white;">
+                                <th style="background-color: <?= $formModel->colors['color2'] ?>; color: white;">
                                     <?= $column->description ?>
                                 </th>
                             <?php endforeach ?>
@@ -15,7 +15,7 @@
                     <tbody>
                         <?php if (count($formModel->objRowArrResult)): ?>
                             <?php foreach ($formModel->objRowArrResult as $i => $rowObj): ?>
-                                <tr style="background-color: lightgray;">
+                                <tr style="background-color: <?= $formModel->colors['color3'] ?>;">
                                 <?php foreach ($formModel->columnDefinitions as $column): ?>
                                     <?php switch ($column->type):
                                         case ColumnType::MONEY->value: ?>

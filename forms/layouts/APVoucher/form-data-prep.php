@@ -24,6 +24,9 @@ $formModel->mpdfOptions->marginBottom = 10;
 
 ############################### FORM PROPS ###############################
 $formModel->title = 'AP VOUCHER';
+$formModel->colors['color1'] = 'lightblue';
+$formModel->colors['color2'] = 'darkblue';
+$formModel->colors['color3'] = 'lightgray';
 
 ############################### HEADER ###############################
 $formModel->header->companyName = $formModel->objRowArrResult->CompnyName;

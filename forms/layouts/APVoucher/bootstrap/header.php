@@ -4,7 +4,7 @@
             <div style="text-align: center;"><span><strong><?= $formModel->header->companyName ?></strong></span></div>
             <div style="text-align: center;"><span><?= $formModel->header->companyAddress ?></span></div>
             <div style="text-align: center;"><span>VAT REG. TIN : <?= $formModel->header->tinNo ?></span></div>
-            <div style="text-align: center; font-size: 3em; font-weight: bold; color: lightblue;"><span><?= $formModel->header->title ?></span></div>
+            <div style="text-align: center; font-size: 3em; font-weight: bold; color: <?= $formModel->colors['color1'] ?>;"><span><?= $formModel->header->title ?></span></div>
             <div>
                 <table>
                     <tbody>
@@ -76,7 +76,7 @@
                                             </tr>
                                             <tr>
                                                 <td colspan="2">
-                                                    <div style="font-size: 3em; font-weight: bold; color: lightblue;">
+                                                    <div style="font-size: 3em; font-weight: bold; color: <?= $formModel->colors['color1'] ?>;">
                                                         <span>NO.&nbsp;</span><span><?= $formModel->header->documentNumber ?></span>
                                                     </div>
                                                 </td>
