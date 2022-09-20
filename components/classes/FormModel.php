@@ -12,6 +12,7 @@ class FormModel extends DataModel
 
     public object $mpdfOptions;
     public object $header;
+    public object $footer;
 
     public array $columnDefinitions;
     public array $signatories;
@@ -34,6 +35,15 @@ class FormModel extends DataModel
         };
 
         $this->header = new class($this) {
+
+            function __construct(private FormModel $formModel)
+            { 
+                $this->logo = $this->formModel->logo;
+                $this->datePeriod = $this->formModel->datePeriod;
+            }
+        };
+
+        $this->footer = new class($this) {
 
             function __construct(private FormModel $formModel)
             { 
