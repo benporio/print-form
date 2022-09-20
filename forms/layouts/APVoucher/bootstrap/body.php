@@ -43,10 +43,10 @@
                         <tr>
                             <td colspan="<?= count($formModel->columnDefinitions) ?>" style="width: 80%; border: 1px; padding: 0px; margin: 0px;">
                                 <div>
-                                    <table style="width: 100%;">
+                                    <table>
                                         <tbody>
                                             <tr>
-                                                <td style="width: 50%;">
+                                                <td style="width: 400px;">
 
                                                 </td>
                                                 <td style="border: 0px; padding: 0px; margin: 0px; text-align: right;">
@@ -54,7 +54,7 @@
                                                         <table>
                                                             <tbody>
                                                                 <tr>
-                                                                    <td style="text-align: left; width: 50%; font-weight: bold; line-height: 30px;">
+                                                                    <td style="text-align: left; width: 180px; font-weight: bold; line-height: 30px;">
                                                                         <div>
                                                                             <span>
                                                                                 Total Purchase (VAT Inc)
@@ -71,7 +71,7 @@
                                                                     <td style="text-align: right; font-weight: bold; padding-left: 10px;">
                                                                         <div>
                                                                             <span>
-                                                                                <?= Util::moneyFormat($formModel->objRowArrResult[0]->DocTotal) ?>
+                                                                                <?= Util::moneyFormat($formModel->footer->totalPurchase) ?>
                                                                             </span>
                                                                         </div>
                                                                     </td>
@@ -94,7 +94,7 @@
                                                                     <td style="text-align: right; font-weight: bold; padding-left: 10px;">
                                                                         <div>
                                                                             <span>
-                                                                                <?= Util::moneyFormat($formModel->objRowArrResult[0]->WTSum) ?>
+                                                                                <?= Util::moneyFormat($formModel->footer->lessEwt) ?>
                                                                             </span>
                                                                         </div>
                                                                     </td>
@@ -117,7 +117,7 @@
                                                                     <td style="text-align: right; font-weight: bold; padding-left: 10px;">
                                                                         <div>
                                                                             <span>
-                                                                                <?= Util::moneyFormat($formModel->objRowArrResult[0]->AmountToPay) ?>
+                                                                                <?= Util::moneyFormat($formModel->footer->totalAmount) ?>
                                                                             </span>
                                                                         </div>
                                                                     </td>

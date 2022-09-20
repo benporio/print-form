@@ -39,7 +39,6 @@ $formModel->header->customerName = $formModel->objRowArrResult[0]->CardName;
 $formModel->header->customerTin = $formModel->objRowArrResult[0]->LicTradNum;
 $formModel->header->customerAddress = $formModel->objRowArrResult[0]->Address1;
 
-
 ############################### BODY TABLE ###############################
 $formModel->columnDefinitions = Util::arrayToObject([
     [
@@ -68,6 +67,11 @@ $formModel->columnDefinitions = Util::arrayToObject([
         'sqlColumnName' => 'GTotal'
     ]
 ]);
+
+############################### BODY FOOTER ###############################
+$formModel->footer->totalPurchase = $formModel->objRowArrResult[0]->DocTotal;
+$formModel->footer->lessEwt = $formModel->objRowArrResult[0]->WTSum;
+$formModel->footer->totalAmount = $formModel->objRowArrResult[0]->AmountToPay;
 
 ############################### FOOTER ###############################
 $formModel->signatories = [];
