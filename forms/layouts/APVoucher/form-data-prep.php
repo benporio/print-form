@@ -24,20 +24,20 @@ $formModel->mpdfOptions->marginBottom = 10;
 
 ############################### FORM PROPS ###############################
 $formModel->title = 'AP VOUCHER';
-$formModel->colors['color1'] = 'lightblue';
+$formModel->colors['color1'] = 'rgb(26, 149, 214)';
 $formModel->colors['color2'] = 'darkblue';
-$formModel->colors['color3'] = 'lightgray';
+$formModel->colors['color3'] = 'rgb(222, 223, 224)';
 
 ############################### HEADER ###############################
-$formModel->header->companyName = $formModel->objRowArrResult->CompnyName;
-$formModel->header->companyAddress = $formModel->objRowArrResult->CompnyAddr;
-$formModel->header->tinNo = $formModel->objRowArrResult->TaxIdNum;
+$formModel->header->companyName = $formModel->objRowArrResult[0]->CompnyName;
+$formModel->header->companyAddress = $formModel->objRowArrResult[0]->CompnyAddr;
+$formModel->header->tinNo = $formModel->objRowArrResult[0]->TaxIdNum;
 $formModel->header->title = 'AP Voucher';
-$formModel->header->documentDate = $formModel->objRowArrResult->DocDate;
+$formModel->header->documentDate = date('m/d/Y', strtotime($formModel->objRowArrResult[0]->DocDate));
 $formModel->header->documentNumber = $docentry;
-$formModel->header->customerName = $formModel->objRowArrResult->CardName;
-$formModel->header->customerTin = $formModel->objRowArrResult->LicTradNum;
-$formModel->header->customerAddress = $formModel->objRowArrResult->Address1;
+$formModel->header->customerName = $formModel->objRowArrResult[0]->CardName;
+$formModel->header->customerTin = $formModel->objRowArrResult[0]->LicTradNum;
+$formModel->header->customerAddress = $formModel->objRowArrResult[0]->Address1;
 
 
 ############################### BODY TABLE ###############################

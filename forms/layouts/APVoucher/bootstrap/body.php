@@ -22,7 +22,6 @@
                                         <td style="text-align: right;"><?= Util::moneyFormat($rowObj->{$column->sqlColumnName}) ?></td>
                                         <?php break ?>
                                     <?php case ColumnType::ROW_NUMBER->value: ?>
-                                        <td><?= ++$i ?></td>
                                         <?php break ?>
                                     <?php default: ?>
                                         <td><?= $rowObj->{$column->sqlColumnName} ?></td>
@@ -72,7 +71,7 @@
                                                                     <td style="text-align: right; font-weight: bold; padding-left: 10px;">
                                                                         <div>
                                                                             <span>
-                                                                                <?= $formModel->objRowArrResult->DocTotal ?>
+                                                                                <?= Util::moneyFormat($formModel->objRowArrResult[0]->DocTotal) ?>
                                                                             </span>
                                                                         </div>
                                                                     </td>
@@ -95,7 +94,7 @@
                                                                     <td style="text-align: right; font-weight: bold; padding-left: 10px;">
                                                                         <div>
                                                                             <span>
-                                                                                <?= $formModel->objRowArrResult->WTSum ?>
+                                                                                <?= Util::moneyFormat($formModel->objRowArrResult[0]->WTSum) ?>
                                                                             </span>
                                                                         </div>
                                                                     </td>
@@ -118,7 +117,7 @@
                                                                     <td style="text-align: right; font-weight: bold; padding-left: 10px;">
                                                                         <div>
                                                                             <span>
-                                                                                <?= $formModel->objRowArrResult->AmountToPay ?>
+                                                                                <?= Util::moneyFormat($formModel->objRowArrResult[0]->AmountToPay) ?>
                                                                             </span>
                                                                         </div>
                                                                     </td>
