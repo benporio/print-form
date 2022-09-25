@@ -1,18 +1,23 @@
 <div class="header-div container">
     <div class="padder">
         <div class="content">
+            <div style="text-align: center; padding-top: 15px; padding-bottom: 10px; font-size: 2.8em; font-weight: bold; color: <?= $formModel->colors['color1'] ?>;">
+                <span>
+                    <?= $formModel->header->title ?>
+                </span>
+            </div>
             <div>
                 <table>
                     <tbody>
                         <tr>
-                            <td style="vertical-align: bottom; width: 50%;">
+                            <td rowspan="2" style="vertical-align: bottom; width: 50%; padding-bottom: 10px;">
                                 <div>
-                                    <table style="width: 65%; font-size: 1.4em;">
+                                    <table style="width: 65%; font-size: 1.4em; border: 1px solid black;">
                                         <tr>
                                             <th style="background-color: darkblue; color: white; text-align: left;">
                                                 <div>
                                                     <span>
-                                                        CUSTOMER :
+                                                        DELIVERY TO :
                                                     </span>
                                                 </div>
                                             </th>
@@ -36,7 +41,7 @@
                                 </div>
                             </td>
                             <td style="text-align: right; width: 50%;">
-                                <div>
+                                <div style="margin-bottom: 100px;">
                                     <table style="table-layout: auto; width: 70%; text-align: center; font-size: 1.1em;">
                                         <tr>
                                             <th style="border: 0.5px solid black; border-bottom: 0.5px solid white; background-color: darkblue; text-align: left;">
@@ -76,48 +81,14 @@
                                         </tr>
                                     </table>
                                 </div>
+                                
                             </td>
                         </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div style="margin-top: 20px;">
-                <table style="width: 60%; font-size: 1.4em;">
-                    <thead>
                         <tr>
-                            <th style="border: 0.5px solid black; border-right: 0.5px solid white; background-color: darkblue; color: white;">
-                                <span>
-                                    Salesperson
-                                </span>
-                            </th>
-                            <th style="border: 0.5px solid black; border-left: 0.5px solid white; border-right: 0.5px solid white; background-color: darkblue;  color: white;">
-                                <span>
-                                    Shipping Method
-                                </span>
-                            </th>
-                            <th style="border: 0.5px solid black; border-left: 0.5px solid white; background-color: darkblue;  color: white;">
-                                <span>
-                                    Shipping Terms
-                                </span>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td style="border: 0.5px solid black;">
-                                <span>
-                                    <?= $formModel->header->salesPerson ?>
-                                </span>
-                            </td>
-                            <td style="border: 0.5px solid black;">
-                                <span>
-                                    <?= $formModel->header->shippingMethod ?>
-                                </span>
-                            </td>
-                            <td style="border: 0.5px solid black;">
-                                <span>
-                                    <?= $formModel->header->shippingTerms ?>
-                                </span>
+                            <td style="vertical-align: bottom; text-align: right; padding-right: 30px;">
+                                <div style="font-size: 2em; font-weight: bold; color: <?= $formModel->colors['color1'] ?>;">
+                                    <span>NO. 1000</span>
+                                </div>
                             </td>
                         </tr>
                     </tbody>

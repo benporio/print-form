@@ -23,15 +23,15 @@ $formModel->mpdfOptions->marginRight = 10;
 $formModel->mpdfOptions->marginBottom = 10;
 
 ############################### FORM PROPS ###############################
-$formModel->title = 'SALES ORDER';
-$formModel->colors['color1'] = 'rgb(0, 112, 192)';
+$formModel->title = 'DELIVERY RECEIPT';
+$formModel->colors['color1'] = 'rgb(68, 114, 196)';
 $formModel->colors['color2'] = 'darkblue';
 
 ############################### HEADER ###############################
 $formModel->header->companyName = 'JCBA Solutions and Consultancy Inc.';
-$formModel->header->companyAddress = $formModel->header->companyName.'<br>[Street Address]<br>[City, Country, ZIP]<br>[VAT Registered TIN]<br>[Phone Number]<br>[Fax No.]<br>[Website]';
-$formModel->header->tinNo = '008-647-370-000';
-$formModel->header->title = 'SALES<br>ORDER';
+$formModel->header->companyAddress = '21 Esteban South Street Dalandanan, Valenzuela City, 3rd Dist, NCR, Philippines, 1443';
+$formModel->header->tinNo = '_____________________';
+$formModel->header->title = $formModel->title;
 $formModel->header->documentDate = date('F j, Y');
 $formModel->header->documentNumber = $docentry;
 $formModel->header->paymentTerms = '';
@@ -69,21 +69,6 @@ $formModel->columnDefinitions = Util::arrayToObject([
         'description' => 'QTY',
         'type' => ColumnType::NUMBER,
         'sqlColumnName' => 'key3'
-    ],
-    [
-        'description' => 'UNIT PRICE',
-        'type' => ColumnType::MONEY,
-        'sqlColumnName' => 'key4'
-    ],
-    [
-        'description' => 'DISC.',
-        'type' => ColumnType::MONEY,
-        'sqlColumnName' => 'key5'
-    ],
-    [
-        'description' => 'TOTAL AMOUNT',
-        'type' => ColumnType::MONEY,
-        'sqlColumnName' => 'key6'
     ]
 ]);
 
@@ -97,6 +82,15 @@ $formModel->footer->vatAmount = '-';
 $formModel->footer->subTotal = '-';
 
 ############################### FOOTER ###############################
+$formModel->footer->printNo = '';
+$formModel->footer->dateIssued = '';
+$formModel->footer->printingCompany = '[Printing Company]';
+$formModel->footer->printingCompanyAddress = '[PAddress]';
+$formModel->footer->printingCompanyTin = '';
+$formModel->footer->printerAccNo = '____________';
+$formModel->footer->dateIssued2 = '_________';
+$formModel->footer->info1 = '"THIS DOCUMENT IS NOT VALID FOR CLAIM OF INPUT TAXES"';
+$formModel->footer->info2 = 'THIS INVOICE SHALL BE VALID FOR FIVE (5) YEARS FROM THE';
 $formModel->footer->signatories = [
     (object) [
         'name' => 'TEST 1',

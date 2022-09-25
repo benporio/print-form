@@ -2,11 +2,11 @@
     <div class="padder">
         <div class="content">
             <div>
-                <table class="details" style="width: 100%; font-size: 1.1em; border: 1px solid black;">
+                <table class="details" style="width: 100%; font-size: 1.1em;">
                     <thead>
                         <tr>
                             <?php foreach($formModel->columnDefinitions as $column): ?>
-                                <th style="border: 0.5px solid black; border-right: 0.5px solid white; background-color: darkblue; color: white;">
+                                <th style="border: 0.5px solid black; border-right: 0.5px solid white; background-color: <?= $formModel->colors['color2'] ?>; color: white;">
                                     <?= $column->description ?>
                                 </th>
                             <?php endforeach ?>
@@ -45,8 +45,8 @@
                                         <tbody>
                                             <tr>
                                                 <td style="width: 60%; border: 0px; padding: 0px; margin: 0px; text-align: left; vertical-align: bottom;">
-                                                    <div>
-                                                        <table style="text-align: left;">
+                                                    <div style="height: 500px;">
+                                                        <table style="text-align: left; height: 500px;">
                                                             <tbody>
                                                                 <tr>
                                                                     <td style="background-color: lightgray; color: black; font-weight: bold;">
@@ -61,7 +61,7 @@
                                                                     <td>
                                                                         <div>
                                                                             <span>
-                                                                                Test Comment
+                                                                                <?= $formModel->footer->comment ?>
                                                                             </span>
                                                                         </div>
                                                                     </td>
@@ -85,10 +85,17 @@
                                                                             </span>
                                                                         </div>
                                                                     </td>
-                                                                    <td style="text-align: left; padding-left: 10px; border-color: lightgray; border-style: solid; border-width: 0px 0.5px 0.5px 0.5px;">
+                                                                    <td style="text-align: left; padding-left: 10px; border-color: lightgray; border-style: solid; border-width: 0px 0px 0.5px 0.5px;">
                                                                         <div>
                                                                             <span>
-                                                                                ₱ -
+                                                                                ₱
+                                                                            </span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td style="text-align: right; padding-right: 10px; border-color: lightgray; border-style: solid; border-width: 0px 0.5px 0.5px 0px;">
+                                                                        <div>
+                                                                            <span>
+                                                                                <?= $formModel->footer->subTotal ?>
                                                                             </span>
                                                                         </div>
                                                                     </td>
@@ -101,10 +108,17 @@
                                                                             </span>
                                                                         </div>
                                                                     </td>
-                                                                    <td style="text-align: left; padding-left: 10px; border-color: lightgray; border-style: solid; border-width: 0px 0.5px 0.5px 0.5px;">
+                                                                    <td style="text-align: left; padding-left: 10px; border-color: lightgray; border-style: solid; border-width: 0px 0px 0.5px 0.5px;">
                                                                         <div>
                                                                             <span>
-                                                                                ₱ -
+                                                                                ₱
+                                                                            </span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td style="text-align: right; padding-right: 10px; border-color: lightgray; border-style: solid; border-width: 0px 0.5px 0.5px 0px;">
+                                                                        <div>
+                                                                            <span>
+                                                                                <?= $formModel->footer->vatAmount ?>
                                                                             </span>
                                                                         </div>
                                                                     </td>
@@ -117,10 +131,17 @@
                                                                             </span>
                                                                         </div>
                                                                     </td>
-                                                                    <td style="text-align: left; padding-left: 10px; border-color: lightgray; border-style: solid; border-width: 0px 0.5px 0.5px 0.5px;">
+                                                                    <td style="text-align: left; padding-left: 10px; border-color: lightgray; border-style: solid; border-width: 0px 0px 0.5px 0.5px;">
                                                                         <div>
                                                                             <span>
-                                                                                ₱ -
+                                                                                ₱
+                                                                            </span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td style="text-align: right; padding-right: 10px; border-color: lightgray; border-style: solid; border-width: 0px 0.5px 0.5px 0px;">
+                                                                        <div>
+                                                                            <span>
+                                                                                <?= $formModel->footer->netAmount ?>
                                                                             </span>
                                                                         </div>
                                                                     </td>
@@ -152,10 +173,17 @@
                                                                             </span>
                                                                         </div>
                                                                     </td>
-                                                                    <td style="text-align: left; padding-left: 10px; border-color: lightgray; border-style: solid; border-width: 0.5px 0.5px 0.5px 0.5px;">
+                                                                    <td style="text-align: left; padding-left: 10px; border-color: lightgray; border-style: solid; border-width: 0.5px 0px 0.5px 0.5px;">
                                                                         <div>
                                                                             <span>
-                                                                                ₱ -
+                                                                                ₱
+                                                                            </span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td style="text-align: right; padding-right: 10px; border-color: lightgray; border-style: solid; border-width: 0.5px 0.5px 0.5px 0px;">
+                                                                        <div>
+                                                                            <span>
+                                                                                <?= $formModel->footer->discount ?>
                                                                             </span>
                                                                         </div>
                                                                     </td>
@@ -168,10 +196,17 @@
                                                                             </span>
                                                                         </div>
                                                                     </td>
-                                                                    <td style="text-align: left; padding-left: 10px; border-color: lightgray; border-style: solid; border-width: 0px 0.5px 0.5px 0.5px;">
+                                                                    <td style="text-align: left; padding-left: 10px; border-color: lightgray; border-style: solid; border-width: 0px 0px 0.5px 0.5px;">
                                                                         <div>
                                                                             <span>
-                                                                                ₱ -
+                                                                                ₱
+                                                                            </span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td style="text-align: right; padding-right: 10px; border-color: lightgray; border-style: solid; border-width: 0px 0.5px 0.5px 0px;">
+                                                                        <div>
+                                                                            <span>
+                                                                                <?= $formModel->footer->withHoldingTax ?>
                                                                             </span>
                                                                         </div>
                                                                     </td>
@@ -184,10 +219,17 @@
                                                                             </span>
                                                                         </div>
                                                                     </td>
-                                                                    <td style="text-align: left; padding-left: 10px; border-bottom: 3px double black; border-left: 0.5 solid lightgray; border-right: 0.5 solid lightgray;">
+                                                                    <td style="text-align: left; padding-left: 10px; border-color: lightgray; border-style: solid; border-width: 0px 0px 0.5px 0.5px;">
                                                                         <div>
                                                                             <span>
-                                                                                ₱ -
+                                                                                ₱
+                                                                            </span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td style="text-align: right; padding-right: 10px; border-color: lightgray; border-style: solid; border-width: 0px 0.5px 0.5px 0px;">
+                                                                        <div>
+                                                                            <span>
+                                                                                <?= $formModel->footer->totalAmount ?>
                                                                             </span>
                                                                         </div>
                                                                     </td>

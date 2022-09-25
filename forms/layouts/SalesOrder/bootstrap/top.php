@@ -8,8 +8,7 @@
                             <td style="vertical-align: bottom; width: 50%;">
                                 <div>
                                     <span id="formTitle">
-                                        SALES<br>
-                                        ORDER
+                                        <?= $formModel->header->title ?>
                                     </span>
                                 </div>
                             </td>
@@ -31,7 +30,7 @@
                                 <div>
                                     <table style="table-layout: auto; width: 55%; text-align: center; font-size: 1.1em;">
                                         <tr>
-                                            <th style="border: 0.5px solid black; border-bottom: 0.5px solid white; background-color: darkblue; text-align: left;">
+                                            <th style="border: 0.5px solid black; border-bottom: 0.5px solid white; background-color: <?= $formModel->colors['color2'] ?>; text-align: left;">
                                                 <span style="color: white;">
                                                     DATE
                                                 </span>
@@ -43,7 +42,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th style="border: 0.5px solid black; border-top: 0.5px solid white; background-color: darkblue; text-align: left;">
+                                            <th style="border: 0.5px solid black; border-top: 0.5px solid white; background-color: <?= $formModel->colors['color2'] ?>; text-align: left;">
                                                 <span style="color: white;">
                                                     SO No.
                                                 </span>

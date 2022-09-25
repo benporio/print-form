@@ -13,7 +13,7 @@
         padding-top: 10px;
     }
     .body-div {
-        padding-top: 20px;
+        padding-top: 10px;
     }
     .footer-div {
         padding-top: 20px;
@@ -29,7 +29,6 @@
         width: 100%;
     }
     .body-div table.details {
-        margin-top: 5px;
         text-align: center;
         font-size: 10px;
     }
@@ -52,7 +51,7 @@
     }
     .line {
         margin: 0px; 
-        width: 80%; 
+        width: 100%; 
         height: 1px; 
         color: black
     }
