@@ -8,6 +8,7 @@ class TestDataSource
     public mixed $deliveryReport_objRowArrResult;
     public mixed $receiptVoucher_objRowArrResult;
     public mixed $apVoucher_objRowArrResult;
+    public mixed $paymentVoucher_objRowArrResult;
 
     private function __construct()
     {
@@ -152,6 +153,29 @@ class TestDataSource
                 'key3' => 4,
                 'key4' => 32,
                 'key5' => 12.75,
+            ]
+        ]);
+
+        $this->paymentVoucher_objRowArrResult = Util::arrayToObject([
+            [
+                'key1' => 'value1_1',
+                'key2' => 'value1_2',
+                'key3' => 'value1_3',
+                'key4' => 150.50,
+                'key5' => 90,
+                'key6' => 90,
+                'key7' => 90,
+                'key8' => 90,
+            ],
+            [
+                'key1' => 'value2_1',
+                'key2' => 'value2_2',
+                'key3' => 'value2_3',
+                'key4' => 32,
+                'key5' => 12.75,
+                'key6' => 12.75,
+                'key7' => 12.75,
+                'key8' => 12.75,
             ]
         ]);
     }
