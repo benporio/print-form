@@ -15,7 +15,10 @@ final class Util
     public static function moneyFormat(int|float $num, int $decimal = 2): mixed 
     {
         try {
-            return number_format((float)$num, $decimal, '.', '');
+            if (is_null($num)) {
+                return '0.00';
+            }
+            return number_format((float)$num, $decimal, '.', ',');
         } catch (\Exception $e) {
             throw $e;
         }
