@@ -12,7 +12,7 @@ final class Util
         
     }
 
-    public static function moneyFormat(int|float $num, int $decimal = 2): mixed 
+    public static function moneyFormat(mixed $num, int $decimal = 2): mixed 
     {
         try {
             if (is_null($num)) {
