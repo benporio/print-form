@@ -9,7 +9,7 @@
                                 <div>
                                     <table style="width: 65%; font-size: 1.4em;">
                                         <tr>
-                                            <th style="background-color: darkblue; color: white; text-align: left;">
+                                            <th style="background-color: <?= $formModel->colors['color2'] ?>; color: white; text-align: left;">
                                                 <div>
                                                     <span>
                                                         CUSTOMER :
@@ -39,7 +39,7 @@
                                 <div>
                                     <table style="table-layout: auto; width: 70%; text-align: center; font-size: 1.1em;">
                                         <tr>
-                                            <th style="border: 0.5px solid black; border-bottom: 0.5px solid white; background-color: darkblue; text-align: left;">
+                                            <th style="border: 0.5px solid black; border-bottom: 0.5px solid white; background-color: <?= $formModel->colors['color2'] ?>; text-align: left;">
                                                 <span style="color: white;">
                                                     Payment Terms
                                                 </span>
@@ -51,7 +51,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th style="border: 0.5px solid black; border-top: 0.5px solid white; border-bottom: 0.5px solid white; background-color: darkblue; text-align: left;">
+                                            <th style="border: 0.5px solid black; border-top: 0.5px solid white; border-bottom: 0.5px solid white; background-color: <?= $formModel->colors['color2'] ?>; text-align: left;">
                                                 <span style="color: white;">
                                                     Delivery Date
                                                 </span>
@@ -63,7 +63,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th style="border: 0.5px solid black; border-top: 0.5px solid white; background-color: darkblue; text-align: left;">
+                                            <th style="border: 0.5px solid black; border-top: 0.5px solid white; background-color: <?= $formModel->colors['color2'] ?>; text-align: left;">
                                                 <span style="color: white;">
                                                     Due Date
                                                 </span>
@@ -85,17 +85,17 @@
                 <table style="width: 60%; font-size: 1.4em;">
                     <thead>
                         <tr>
-                            <th style="border: 0.5px solid black; border-right: 0.5px solid white; background-color: darkblue; color: white;">
+                            <th style="border: 0.5px solid black; border-right: 0.5px solid white; background-color: <?= $formModel->colors['color2'] ?>; color: white;">
                                 <span>
                                     Salesperson
                                 </span>
                             </th>
-                            <th style="border: 0.5px solid black; border-left: 0.5px solid white; border-right: 0.5px solid white; background-color: darkblue;  color: white;">
+                            <th style="border: 0.5px solid black; border-left: 0.5px solid white; border-right: 0.5px solid white; background-color: <?= $formModel->colors['color2'] ?>;  color: white;">
                                 <span>
                                     Shipping Method
                                 </span>
                             </th>
-                            <th style="border: 0.5px solid black; border-left: 0.5px solid white; background-color: darkblue;  color: white;">
+                            <th style="border: 0.5px solid black; border-left: 0.5px solid white; background-color: <?= $formModel->colors['color2'] ?>;  color: white;">
                                 <span>
                                     Shipping Terms
                                 </span>

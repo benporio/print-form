@@ -23,34 +23,25 @@ $formModel->mpdfOptions->marginRight = 10;
 $formModel->mpdfOptions->marginBottom = 10;
 
 ############################### FORM PROPS ###############################
-$formModel->title = 'SALES ORDER';
-$formModel->colors['color1'] = 'rgb(0, 112, 192)';
+$formModel->title = 'SALES INVOICE';
+$formModel->colors['color1'] = 'rgb(68, 114, 196)';
 $formModel->colors['color2'] = 'rgb(0, 32, 96)';
 
 ############################### HEADER ###############################
 $formModel->header->companyName = 'JCBA Solutions and Consultancy Inc.';
-$formModel->header->companyAddress = $formModel->header->companyName.'<br>[Street Address]<br>[City, Country, ZIP]<br>[VAT Registered TIN]<br>[Phone Number]<br>[Fax No.]<br>[Website]';
-$formModel->header->tinNo = '008-647-370-000';
-$formModel->header->title = 'SALES<br>ORDER';
+$formModel->header->companyAddress = '21 Esteban South Street Dalandanan, Valenzuela City, 3rd Dist, NCR, Philippines, 1443';
+$formModel->header->tinNo = '_____________________';
+$formModel->header->title = $formModel->title;
 $formModel->header->documentDate = date('F j, Y');
-$formModel->header->documentNumber = $docentry;
-$formModel->header->paymentTerms = '';
-$formModel->header->deliveryDate = '';
-$formModel->header->dueDate = '';
+$formModel->header->documentNumber = '1000'; //$docentry
 
-$formModel->header->customerName = '[Company Name]';
-$formModel->header->contactPerson = '[Contact Person | Department]';
-$formModel->header->streetAddress = '[Street Address]';
-$formModel->header->city = '[City';
-$formModel->header->country = 'Country';
-$formModel->header->zip = 'ZIP]';
-$formModel->header->customerTin = '[VAT Registered TIN]';
-$formModel->header->customerContactNo = '[Phone Number]';
-$formModel->header->faxNo = '[Fax No.]';
-
-$formModel->header->salesPerson = 'test';
-$formModel->header->shippingMethod = 'test';
-$formModel->header->shippingTerms = 'test';
+$formModel->header->customerName = 'Customer';
+$formModel->header->customerAddress = 'Customer Address';
+$formModel->header->customerTin = 'Customer TIN';
+$formModel->header->customerBusinessStyle = 'Sample Business Style';
+$formModel->header->terms = 'Sample Terms';
+$formModel->header->oscaPwdIdNo = 'Sample OSCA No';
+$formModel->header->scPwdSignature = 'Sample PWD Signature';
 
 
 ############################### BODY TABLE ###############################
@@ -76,7 +67,7 @@ $formModel->columnDefinitions = Util::arrayToObject([
         'sqlColumnName' => 'key4'
     ],
     [
-        'description' => 'DISC.',
+        'description' => 'DISC',
         'type' => ColumnType::MONEY,
         'sqlColumnName' => 'key5'
     ],
@@ -88,15 +79,26 @@ $formModel->columnDefinitions = Util::arrayToObject([
 ]);
 
 ############################### BODY FOOTER ###############################
-$formModel->footer->comment = 'Test Comment';
-$formModel->footer->totalAmount = '-';
-$formModel->footer->withHoldingTax = '-';
-$formModel->footer->discount = '-';
-$formModel->footer->netAmount = '-';
+$formModel->footer->vatableSales = '-';
+$formModel->footer->vatExAmount = '-';
+$formModel->footer->zeroRatedSales = '-';
 $formModel->footer->vatAmount = '-';
-$formModel->footer->subTotal = '-';
+$formModel->footer->totalSales = '-';
+$formModel->footer->lessVat = '-';
+$formModel->footer->netAmount = '-';
+$formModel->footer->scPwdDiscount = '-';
+$formModel->footer->addVat = '-';
+$formModel->footer->totalAmount = '-';
 
 ############################### FOOTER ###############################
+$formModel->footer->printNo = '';
+$formModel->footer->dateIssued = '';
+$formModel->footer->printingCompany = '[Printing Company]';
+$formModel->footer->printingCompanyAddress = '[PAddress]';
+$formModel->footer->printingCompanyTin = '';
+$formModel->footer->printerAccNo = '____________';
+$formModel->footer->dateIssued2 = '_________';
+$formModel->footer->info2 = 'THIS INVOICE SHALL BE VALID FOR FIVE (5) YEARS FROM THE';
 $formModel->footer->signatories = [
     (object) [
         'name' => 'TEST 1',

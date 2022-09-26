@@ -25,7 +25,7 @@ $formModel->mpdfOptions->marginBottom = 10;
 ############################### FORM PROPS ###############################
 $formModel->title = 'DELIVERY RECEIPT';
 $formModel->colors['color1'] = 'rgb(68, 114, 196)';
-$formModel->colors['color2'] = 'darkblue';
+$formModel->colors['color2'] = 'rgb(0, 32, 96)';
 
 ############################### HEADER ###############################
 $formModel->header->companyName = 'JCBA Solutions and Consultancy Inc.';
@@ -33,7 +33,7 @@ $formModel->header->companyAddress = '21 Esteban South Street Dalandanan, Valenz
 $formModel->header->tinNo = '_____________________';
 $formModel->header->title = $formModel->title;
 $formModel->header->documentDate = date('F j, Y');
-$formModel->header->documentNumber = $docentry;
+$formModel->header->documentNumber = '1000'; //$docentry
 $formModel->header->paymentTerms = '';
 $formModel->header->deliveryDate = '';
 $formModel->header->dueDate = '';

@@ -211,7 +211,7 @@
                                                                         </div>
                                                                     </td>
                                                                 </tr>
-                                                                <tr>
+                                                                <tr style="border-bottom: 2px double black; ">
                                                                     <td style="text-align: right;">
                                                                         <div>
                                                                             <span>
@@ -219,18 +219,24 @@
                                                                             </span>
                                                                         </div>
                                                                     </td>
-                                                                    <td style="text-align: left; padding-left: 10px; border-color: lightgray; border-style: solid; border-width: 0px 0px 0.5px 0.5px;">
+                                                                    <td colspan="2" style="margin: 0; padding: 0; border-left: 0.5px solid lightgray; border-right: 0.5px solid lightgray; border-bottom: 3px double black;">
                                                                         <div>
-                                                                            <span>
-                                                                                ₱
-                                                                            </span>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td style="text-align: right; padding-right: 10px; border-color: lightgray; border-style: solid; border-width: 0px 0.5px 0.5px 0px;">
-                                                                        <div>
-                                                                            <span>
-                                                                                <?= $formModel->footer->totalAmount ?>
-                                                                            </span>
+                                                                            <table>
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td style="padding-left: 10px; text-align: left;">
+                                                                                            <div>
+                                                                                                <span>₱</span>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td style="padding-right: 10px;">
+                                                                                            <div>
+                                                                                                <span><?= $formModel->footer->totalAmount ?></span>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
                                                                         </div>
                                                                     </td>
                                                                 </tr>
