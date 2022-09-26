@@ -25,7 +25,7 @@
     <?php include __DIR__.'/bootstrap/body.php'; ?>
     <!----- BODY ----->
 
-
+    
 
     <!----- BOTTOM ----->
     <?php include __DIR__.'/bootstrap/bottom.php'; ?>

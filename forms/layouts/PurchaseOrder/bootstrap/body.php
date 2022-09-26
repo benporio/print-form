@@ -1,8 +1,8 @@
 <div class="body-div container">
     <div class="padder">
         <div class="content">
-            <div>
-                <table class="details" style="width: 100%; font-size: 1.1em; border: 1px solid black;">
+            <div style="height: 200px; border: 1px solid black;">
+                <table class="details" style="width: 100%; font-size: 1.1em;">
                     <thead>
                         <tr>
                             <?php foreach($formModel->columnDefinitions as $column): ?>
