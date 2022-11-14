@@ -19,6 +19,8 @@ class FormModel extends DataModel
 
     public array $objRowArrResult;
 
+    public array $rowFormulas;
+
     public function __construct()
     {
         ### Setting default logo setup
@@ -65,15 +67,21 @@ class FormModel extends DataModel
             public int $marginBottom = 0;
             public int $marginHeader = 5;
             public int $marginFooter = 5;
+            public string $format = 'Letter';
         };
     }
 
-    public function getColumnTotal(string $columnName): float
+    public function getColumnTotal(string $columnName, bool $isFormulaName = false): float
     {
         return array_reduce(
             $this->objRowArrResult,
-            fn($acc, $row) => $acc += (float)$row->{$columnName},
+            fn($acc, $row) => $acc += ($isFormulaName ? $this->execRowFormula($columnName, $row) : (float)$row->{$columnName}),
             0
         );
+    }
+
+    public function execRowFormula(string $formulaName, object $currentRow): mixed
+    {
+        return $this->rowFormulas[$formulaName]($currentRow, $this);
     }
 }
