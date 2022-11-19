@@ -34,7 +34,8 @@ $mpdf = new \Mpdf\Mpdf([
     'pagenumPrefix' => $formModel->mpdfOptions->pagenumPrefix,
     'pagenumSuffix' => $formModel->mpdfOptions->pagenumSuffix,
     'nbpgPrefix' => $formModel->mpdfOptions->nbpgPrefix,
-    'nbpgSuffix' => $formModel->mpdfOptions->nbpgSuffix
+    'nbpgSuffix' => $formModel->mpdfOptions->nbpgSuffix,
+    'format' => $formModel->mpdfOptions->format
 ]);
 
 $mpdf->mirrorMargins = 0.5;
